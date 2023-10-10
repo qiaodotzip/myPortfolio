@@ -159,7 +159,7 @@ export const Projects = () => {
                         <p>You're looking at it right now! Made with HTML, CSS, React.js, and using animation libraries such as Framer and CSS Animation. Hosted on Netlify. 
                         </p>
                         <p>
-                        <button><a href="https://github.com/qiaodotzip/portfolio"><span>View Code</span></a></button>
+                        <button><a href="https://github.com/qiaodotzip/myPortfolio"><span>View Code</span></a></button>
                         </p>
                     </Tab.Pane>
                   </Tab.Content>

@@ -41,8 +41,9 @@ export const Contact = () => {
                 transition={{ duration: 1 }}
                 >
                 <h2>Get In Touch</h2>
-                <form data-netlify="true" onSubmit={handleSubmit} name="contactForm">
+                <form data-netlify="true" method="POST" onSubmit={handleSubmit} name="contactForm">
                 <input type="hidden" name="form-name" value="contactForm" />
+                <input type="hidden" name="bot-field" />
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" name="firstName" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />

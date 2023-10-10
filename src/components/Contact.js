@@ -1,50 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contactImg.webp";
 import { motion } from 'framer-motion';
 
-
 export const Contact = () => {
-  state = {
+  const [formDetails, setFormDetails] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
-    message: '',
-    buttonText: 'Send',
-    status: {}
-  };
+    message: ''
+  });
+  
+  const [buttonText, setButtonText] = useState('Send');
+  const [status, setStatus] = useState({});
+  const { firstName, lastName, email, phone, message } = formDetails;
 
-  encode = (data) => {
+  const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   }
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormDetails(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setButtonText("Sending...");
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ "form-name": "contactForm", ...this.state })
+      body: encode({ "form-name": "contactForm", ...formDetails })
     })
-    .then(() => {
-      this.setState({ status: { message: 'Success!', success: true }});
-    })
-    .catch(error => {
-      this.setState({ status: { message: 'Error!', success: false }});
-    });
-
-    this.setState({ buttonText: "Sending..." });
+    .then(() => setStatus({ message: 'Success!', success: true }))
+    .catch(error => setStatus({ message: 'Error!', success: false }));
   };
-
-  render() {
-    const { firstName, lastName, email, phone, message, buttonText, status } = this.state;
 
     return (
       <section className="contact" id="connect">
@@ -60,24 +57,24 @@ export const Contact = () => {
                 transition={{ duration: 1 }}
               >
                 <h2>Get In Touch</h2>
-                <form method="POST" data-netlify="true" name="contactForm" onSubmit={this.handleSubmit}>
+                <form method="POST" data-netlify="true" name="contactForm" onSubmit={handleSubmit}>
                   <input type="hidden" name="form-name" value="contactForm" />
                   <input type="hidden" name="bot-field" />
                   <Row>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" name="firstName" value={firstName} placeholder="First Name" onChange={this.handleChange} />
+                      <input type="text" name="firstName" value={firstName} placeholder="First Name" onChange={handleChange} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" name="lastName" value={lastName} placeholder="Last Name" onChange={this.handleChange} />
+                      <input type="text" name="lastName" value={lastName} placeholder="Last Name" onChange={handleChange} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="email" name="email" value={email} placeholder="Email Address" onChange={this.handleChange} />
+                      <input type="email" name="email" value={email} placeholder="Email Address" onChange={handleChange} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="tel" name="phone" value={phone} placeholder="Phone No." onChange={this.handleChange} />
+                      <input type="tel" name="phone" value={phone} placeholder="Phone No." onChange={handleChange} />
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6" value={message} placeholder="Message" onChange={this.handleChange}></textarea>
+                      <textarea rows="6" value={message} placeholder="Message" onChange={handleChange}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {
@@ -95,5 +92,4 @@ export const Contact = () => {
       </section>
     );
   }
-}
 

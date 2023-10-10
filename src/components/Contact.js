@@ -1,65 +1,82 @@
-import { useState } from "react";
+import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contactImg.webp";
 import { motion } from 'framer-motion';
 
-export const Contact = () => {
-  const formInitialDetails = {
+class Contact extends React.Component {
+  state = {
     firstName: '',
-    lastName: '', 
+    lastName: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    buttonText: 'Send',
+    status: {}
   };
 
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
 
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value
-    });
-  };
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
-  const handleSubmit = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
-  };
 
-  return (
-    <section className="contact" id="connect">
-      <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-                <img src={contactImg} alt="Contact Us"/>
-          </Col>
-          <Col size={12} md={6}>
-              <motion.Div
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ "form-name": "contactForm", ...this.state })
+    })
+    .then(() => {
+      this.setState({ status: { message: 'Success!', success: true }});
+    })
+    .catch(error => {
+      this.setState({ status: { message: 'Error!', success: false }});
+    });
+
+    this.setState({ buttonText: "Sending..." });
+  }
+
+  render() {
+    const { firstName, lastName, email, phone, message, buttonText, status } = this.state;
+
+    return (
+      <section className="contact" id="connect">
+        <Container>
+          <Row className="align-items-center">
+            <Col size={12} md={6}>
+              <img src={contactImg} alt="Contact Us"/>
+            </Col>
+            <Col size={12} md={6}>
+              <motion.div
                 initial={{ opacity: 0, y: '-200px' }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                >
+              >
                 <h2>Get In Touch</h2>
-                <form method="POST" data-netlify="true" name="contactForm" onSubmit={handleSubmit}>
-                <input type="hidden" name="form-name" value="contactForm" />
-                <input type="hidden" name="bot-field" />
+                <form method="POST" data-netlify="true" name="contactForm" onSubmit={this.handleSubmit}>
+                  <input type="hidden" name="form-name" value="contactForm" />
+                  <input type="hidden" name="bot-field" />
                   <Row>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" name="firstName" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                      <input type="text" name="firstName" value={firstName} placeholder="First Name" onChange={this.handleChange} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" name="lastName" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input type="text" name="lastName" value={lastName} placeholder="Last Name" onChange={this.handleChange} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="email" name="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                      <input type="email" name="email" value={email} placeholder="Email Address" onChange={this.handleChange} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="tel" name="phone" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                      <input type="tel" name="phone" value={phone} placeholder="Phone No." onChange={this.handleChange} />
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                      <textarea rows="6" value={message} placeholder="Message" onChange={this.handleChange}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {
@@ -70,10 +87,13 @@ export const Contact = () => {
                     }
                   </Row>
                 </form>
-                </motion.Div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-  )
+              </motion.div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    )
+  }
 }
+
+export default Contact;

@@ -34,7 +34,7 @@ You can view the live version of my portfolio here: [stefaniepoh.netlify.app](ht
 
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/qiaodotzip/portfolio.git
 ```
 
 2. Change into the project directory:

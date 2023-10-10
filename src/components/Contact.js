@@ -24,6 +24,7 @@ export const Contact = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     setButtonText("Sending...");
   };
 
@@ -41,7 +42,7 @@ export const Contact = () => {
                 transition={{ duration: 1 }}
                 >
                 <h2>Get In Touch</h2>
-                <form method="POST" onSubmit={handleSubmit} name="contactForm" netlify>
+                <form method="POST" data-netlify="true" name="contactForm" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="contactForm" />
                 <input type="hidden" name="bot-field" />
                   <Row>

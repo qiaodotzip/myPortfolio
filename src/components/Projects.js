@@ -156,7 +156,7 @@ export const Projects = () => {
                         <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
                             Web Portfolio
                         </p>
-                        <p>You're looking at it right now! Made with HTML, CSS, React.js, and using animation libraries such as Framer and CSS Animation. Hosted on Netlify. 
+                        <p>You're looking at it right now! Made with React.js, Framer Motion, CSS Animation and Bootstrap. Hosted on Netlify. 
                         </p>
                         <p>
                         <button><a href="https://github.com/qiaodotzip/myPortfolio"><span>View Code</span></a></button>

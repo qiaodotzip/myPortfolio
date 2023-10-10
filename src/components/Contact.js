@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contactImg.webp";
 import { motion } from 'framer-motion';
 
-class Contact extends React.Component {
+
+export const Contact = () => {
   state = {
     firstName: '',
     lastName: '',
@@ -22,7 +23,7 @@ class Contact extends React.Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +41,7 @@ class Contact extends React.Component {
     });
 
     this.setState({ buttonText: "Sending..." });
-  }
+  };
 
   render() {
     const { firstName, lastName, email, phone, message, buttonText, status } = this.state;
@@ -92,8 +93,7 @@ class Contact extends React.Component {
           </Row>
         </Container>
       </section>
-    )
+    );
   }
 }
 
-export default Contact;

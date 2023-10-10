@@ -1,30 +1,57 @@
-# Getting Started with Create React App
+# My Web Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my web portfolio repository. This portfolio showcases my skills, projects, and a bit about myself. Built with React and hosted on Netlify, it provides a snapshot of my journey and accomplishments as a web developer.
 
-## Available Scripts
+![Main Banner Screenshot](![image](https://github.com/qiaodotzip/myPortfolio/assets/139465626/32757310-5549-4911-8e28-f330ca6c30b0)
+)
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+You can view the live version of my portfolio here: [stefaniepoh.netlify.app](https://stefaniepoh.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💡 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Responsive Design: The portfolio is designed to be viewed on devices of all sizes.
+- Interactive UI: Leveraging `framer-motion` for smooth animations.
+- Dynamic Contact Form: Allows for easy communication.
 
-### `npm test`
+![Skills Section Screenshot](![image](https://github.com/qiaodotzip/myPortfolio/assets/139465626/7781c7f1-cef0-41c0-85cb-69efc4409f58)
+)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Built With
 
-### `npm run build`
+- [React](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Animate CSS](https://animate.style/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Local Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js
+- npm
+
+### Getting Started
+
+1. Clone the repository:
+```
+git clone https://github.com/your-username/portfolio.git
+```
+
+2. Change into the project directory:
+```
+cd portfolio
+```
+
+3. Install the dependencies:
+```
+npm install
+```
+
+4. Start the development server:
+```
+npm start
+```
+
+This runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

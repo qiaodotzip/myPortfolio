@@ -41,7 +41,7 @@ export const Contact = () => {
                 transition={{ duration: 1 }}
                 >
                 <h2>Get In Touch</h2>
-                <form data-netlify="true" method="POST" onSubmit={handleSubmit} name="contactForm">
+                <form method="POST" onSubmit={handleSubmit} name="contactForm" netlify>
                 <input type="hidden" name="form-name" value="contactForm" />
                 <input type="hidden" name="bot-field" />
                   <Row>

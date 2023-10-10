@@ -42,12 +42,12 @@ export const Contact = () => {
       body: encode({ "form-name": "contactForm", ...formDetails })
     })
     .then(() => {
-      setStatus({ message: 'Success!', success: true });
+      setStatus({ message: 'Your message and details have been successfully sent!', success: true });
       setButtonText("Sent!");
       setShowModal(true);  // Show the modal
     })
     .catch(error => {
-      setStatus({ message: 'Error!', success: false });
+      setStatus({ message: 'Error, something went wrong. Please try again later!', success: false });
       setShowModal(true);  // Show the modal
     });
     

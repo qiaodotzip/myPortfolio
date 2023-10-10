@@ -721,6 +721,9 @@ border-right: 0.08em solid #666;
   width: 100%;
 }
 
+.modal {
+  padding-top: 200px;
+}
 /************ Footer Css ************/
 .footer {
   padding: 50px 0 50px 0;

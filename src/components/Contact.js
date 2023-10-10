@@ -74,7 +74,7 @@ export const Contact = () => {
                       <input type="tel" name="phone" value={phone} placeholder="Phone No." onChange={handleChange} />
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6" value={message} placeholder="Message" onChange={handleChange}></textarea>
+                      <textarea rows="6" name="message" value={message} placeholder="Message" onChange={handleChange}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {

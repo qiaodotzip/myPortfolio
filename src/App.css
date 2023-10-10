@@ -22,6 +22,11 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;

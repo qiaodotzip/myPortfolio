@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import contactImg from "../assets/img/contactImg.webp";
 import { motion } from 'framer-motion';
 
@@ -15,6 +15,8 @@ export const Contact = () => {
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
   const { firstName, lastName, email, phone, message } = formDetails;
+  const [showModal, setShowModal] = useState(false);
+
 
   const encode = (data) => {
     return Object.keys(data)
@@ -39,8 +41,16 @@ export const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contactForm", ...formDetails })
     })
-    .then(() => setStatus({ message: 'Success!', success: true }))
-    .catch(error => setStatus({ message: 'Error!', success: false }));
+    .then(() => {
+      setStatus({ message: 'Success!', success: true });
+      setButtonText("Sent!");
+      setShowModal(true);  // Show the modal
+    })
+    .catch(error => {
+      setStatus({ message: 'Error!', success: false });
+      setShowModal(true);  // Show the modal
+    });
+    
   };
 
     return (
@@ -89,6 +99,22 @@ export const Contact = () => {
             </Col>
           </Row>
         </Container>
+        <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Form Status</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p className={status.success === false ? "text-danger" : "text-success"}>
+            {status.message}
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
       </section>
     );
   }

@@ -67,9 +67,14 @@ export const Contact = () => {
                 transition={{ duration: 1 }}
               >
                 <h2>Get In Touch</h2>
-                <form method="POST" data-netlify="true" name="contactForm" onSubmit={handleSubmit}>
+                <form method="POST" data-netlify="true" netlify-honeypot="bot-field" name="contactForm" onSubmit={handleSubmit}>
                   <input type="hidden" name="form-name" value="contactForm" />
                   <input type="hidden" name="bot-field" />
+                  <p class="hidden">
+                    <label>
+                      Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                  </p>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" name="firstName" value={firstName} placeholder="First Name" onChange={handleChange} />
@@ -87,12 +92,6 @@ export const Contact = () => {
                       <textarea rows="6" name="message" value={message} placeholder="Message" onChange={handleChange}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
-                    {
-                      status.message &&
-                      <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
-                    }
                   </Row>
                 </form>
               </motion.div>

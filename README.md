@@ -2,8 +2,7 @@
 
 Welcome to my web portfolio repository. This portfolio showcases my skills, projects, and a bit about myself. Built with React and hosted on Netlify, it provides a snapshot of my journey and accomplishments as a web developer.
 
-![Main Banner Screenshot](![image](https://github.com/qiaodotzip/myPortfolio/assets/139465626/32757310-5549-4911-8e28-f330ca6c30b0)
-)
+![portfolioHome](https://github.com/qiaodotzip/myPortfolio/assets/139465626/b48e7a8c-b363-42d5-9793-2177175e804f)
 
 ## 🌐 Live Demo
 
@@ -15,8 +14,7 @@ You can view the live version of my portfolio here: [stefaniepoh.netlify.app](ht
 - Interactive UI: Leveraging `framer-motion` for smooth animations.
 - Dynamic Contact Form: Allows for easy communication.
 
-![Skills Section Screenshot](![image](https://github.com/qiaodotzip/myPortfolio/assets/139465626/7781c7f1-cef0-41c0-85cb-69efc4409f58)
-)
+![portfolioSkills](https://github.com/qiaodotzip/myPortfolio/assets/139465626/6f03d2b5-554e-4d01-9c37-5c2c04fed63d)
 
 ## 🛠️ Built With
 
@@ -55,3 +53,5 @@ npm start
 ```
 
 This runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![portfolio](https://github.com/qiaodotzip/myPortfolio/assets/139465626/bbd15ea5-0c7c-41ca-9838-75bebf9c3929)
+

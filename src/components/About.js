@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
-import aboutImg from "../assets/img/about.webp";
+import aboutImg from "../assets/img/me.webp";
 import rp from "../assets/img/rp.webp";
 import { motion } from 'framer-motion';
 

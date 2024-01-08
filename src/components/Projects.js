@@ -13,18 +13,18 @@ export const Projects = () => {
 
   const PMI = [
     {
-      title: "Generative AI Chatbot Interaction",
-      description: "Made in Figma",
+      title: "3rd Runner-up",
+      description: "Yay!",
       imgUrl: PMI2,
     },
     {
-      title: "User Interface (UI) & Experience (UX) Design",
-      description: "Made in Figma",
+      title: "Project Presentation Board",
+      description: "Digital Copy can be found on Figma",
       imgUrl: PMI1,
     },
     {
-      title: "Personalized AI-Driven Advertising",
-      description: "Made in Figma",
+      title: "Presentation",
+      description: "Getting grilled in Q&A",
       imgUrl: PMI3,
     },
   ];
@@ -88,7 +88,7 @@ export const Projects = () => {
                   <Tab.Content id="slideInUp">
                     <Tab.Pane eventKey="first">
                         <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
-                        PMI SG Chapter Student Project Management Competition 2023, Top 8 Finalists 
+                        PMI SG Chapter Student Project Management Competition 2023, 3rd Runner-up
                         </p>
                         <Row>
                         {
@@ -102,18 +102,16 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                        <p style={{ marginTop: '20px' }}>We proposed an e-commerce platform to spotlight Singapore's local farmers. Key highlights include:</p>
+                        <p style={{ marginTop: '20px' }}>Integrated Approach for Sustainability and Innovation: Combining sustainability and tech-savvy solutions with fresh produce and Generative AI. Key highlights include:</p>
                         <p>
                         <ul>
-                          <li>Combining fresh produce with the power of Generative AI.</li>
-                          <li>OpenAI-driven chatbot for enhanced customer support.</li>
-                          <li>Backend optimizations to streamline orders and deliveries.</li>
-                          <li>Focus on sustainability with tech-savvy solutions.</li>
+                        <li>Planning an AI Project, combining sustainability and tech-savvy solutions with fresh produce and Generative AI.</li>
+                        <li>Hybrid Project Management Methodology: Planning and designing the project management lifecycle using a combined agile and waterfall approach.</li>
+                        <li>AI Technology Evaluation and User-Flow Design: Evaluating AI technologies and designing user-flow.</li>
+                        <li>Comprehensive Use of Project Management Tools: Utilizing tools like a risk register and Gantt chart, along with presenting a budget and ROI analysis.</li>
                         </ul>
                         </p>
-                        <p>
-                          The finals will be held on 24th November.
-                        </p>
+                        <button><a href="https://www.figma.com/file/R4PgwiVYlFX102rtKQBFmd/PMI-2023-GRASS?type=design&node-id=0%3A1&mode=design&t=nFJcQBLwTcAu4niI-1"><span>View Code</span></a></button>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                         <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>

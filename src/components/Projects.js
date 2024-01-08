@@ -181,7 +181,7 @@ export const Projects = () => {
                         2nd Kumar Sustainability & Innovation Prize, Finalist
                         </p>
                         <p>
-                        Verdefy is a comprehensive PaaS solution designed to aid SMEs in managing and reducing their carbon emissions. Demo Day is scheduled for March 2024. Currently WIP.
+                        Verdefy is a comprehensive PaaS solution designed to aid SMEs in managing and reducing their carbon emissions. Demo Day is scheduled for March 2024.
                         </p>
                         <Row>
                         {

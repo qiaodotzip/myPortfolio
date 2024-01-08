@@ -14,17 +14,17 @@ export const Projects = () => {
   const PMI = [
     {
       title: "3rd Runner-up",
-      description: "Yay!",
+      description: "Worth-it. Winners next year?",
       imgUrl: PMI2,
     },
     {
-      title: "Project Presentation Board",
-      description: "Digital Copy can be found on Figma",
+      title: "Presentation",
+      description: "Fighting for my life during Q&A.",
       imgUrl: PMI1,
     },
     {
-      title: "Presentation",
-      description: "Getting grilled in Q&A",
+      title: "Project Presentation Board",
+      description: "Digital Copy can be found on Figma!",
       imgUrl: PMI3,
     },
   ];
@@ -102,7 +102,7 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                        <p style={{ marginTop: '20px' }}>Integrated Approach for Sustainability and Innovation: Combining sustainability and tech-savvy solutions with fresh produce and Generative AI. Key highlights include:</p>
+                        <p style={{ marginTop: '20px' }}>Planning an IT Project combining sustainability and tech-savvy solutions with fresh produce and Generative AI. Board content can be viewed in the Figma link below. Key highlights include:</p>
                         <p>
                         <ul>
                         <li>Planning an AI Project, combining sustainability and tech-savvy solutions with fresh produce and Generative AI.</li>
@@ -111,7 +111,9 @@ export const Projects = () => {
                         <li>Comprehensive Use of Project Management Tools: Utilizing tools like a risk register and Gantt chart, along with presenting a budget and ROI analysis.</li>
                         </ul>
                         </p>
-                        <button><a href="https://www.figma.com/file/R4PgwiVYlFX102rtKQBFmd/PMI-2023-GRASS?type=design&node-id=0%3A1&mode=design&t=nFJcQBLwTcAu4niI-1"><span>View Code</span></a></button>
+                        <p>
+                        <button><a href="https://www.figma.com/file/R4PgwiVYlFX102rtKQBFmd/PMI-2023-GRASS?type=design&node-id=0%3A1&mode=design&t=nFJcQBLwTcAu4niI-1"><span>View Figma</span></a></button>
+                        </p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                         <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>

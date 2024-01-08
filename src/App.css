@@ -530,6 +530,7 @@ border-right: 0.08em solid #666;
 }
 .nav-link#projects-tabs-tab-third {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .nav-link#projects-tabs-tab-fourth {

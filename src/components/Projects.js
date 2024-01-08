@@ -6,6 +6,9 @@ import PMI3 from "../assets/img/PMI3.webp";
 import PSA1 from "../assets/img/PSA1.webp";
 import PSA2 from "../assets/img/PSA2.webp";
 import PSA3 from "../assets/img/PSA3.webp";
+import KISP1 from "../assets/img/KISP1.webp";
+import KISP2 from "../assets/img/KISP2.webp";
+import KISP3 from "../assets/img/KISP3.webp";
 import colorSharp2 from "../assets/img/color-sharp2.webp";
 import { motion } from 'framer-motion';
 
@@ -44,6 +47,24 @@ export const Projects = () => {
       title: "Working Together",
       description: "What does Neobytes even mean?",
       imgUrl: PSA2,
+    },
+  ];
+
+  const KISP = [
+    {
+      title: "Carbon Emission Report",
+      description: "UI/UX Prototype on Figma",
+      imgUrl: KISP1,
+    },
+    {
+      title: "Home Page",
+      description: "Highly recommend viewing the video!",
+      imgUrl: KISP2,
+    },
+    {
+      title: "Pathfinding + Eco-market place",
+      description: "UI/UX Prototype on Figma",
+      imgUrl: KISP3,
     },
   ];
 
@@ -123,7 +144,7 @@ export const Projects = () => {
                           I designed the database as well as coded the back-end logic. Do note that the following code only contains my part.
                         </p>
                         <p>
-                        <button><a href="https://gitfront.io/r/qiaodotzip/15Y9CC9LmCpk/PSAbackend2023/"><span>View Code</span></a></button>
+                        <button><a href="https://github.com/qiaodotzip/neobytes"><span>Source Code</span></a></button>
                         </p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
@@ -160,11 +181,11 @@ export const Projects = () => {
                         2nd Kumar Sustainability & Innovation Prize, Finalist
                         </p>
                         <p>
-                        Verdefy is a comprehensive PaaS solution designed to aid SMEs in managing and reducing their carbon emissions. Demo Day is scheduled for March 2024.
+                        Verdefy is a comprehensive PaaS solution designed to aid SMEs in managing and reducing their carbon emissions. Demo Day is scheduled for March 2024. Currently WIP.
                         </p>
                         <Row>
                         {
-                          PSA.map((project, index) => {
+                          KISP.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -186,10 +207,10 @@ export const Projects = () => {
                         </ul>
                         </p>
                         <p>
-                          I designed the database as well as coded the back-end logic. Do note that the following code only contains my part.
+                        As the Tech Lead, my role involved developing the AI and data analytics components, as well as designing the overall platform architecture. Submission video narrated and made by me.
                         </p>
                         <p>
-                        <button><a href="https://gitfront.io/r/qiaodotzip/15Y9CC9LmCpk/PSAbackend2023/"><span>View Code</span></a></button>
+                        <button><a href="https://youtu.be/SCVyogJ2Tdo"><span>View Video</span></a></button>
                         </p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="fourth">

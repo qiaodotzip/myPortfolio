@@ -487,7 +487,7 @@ border-right: 0.08em solid #666;
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 25%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;

@@ -78,6 +78,9 @@ export const Projects = () => {
                     <Nav.Item>
                       <Nav.Link eventKey="third">Project 3</Nav.Link>
                     </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="fourth">Project 4</Nav.Link>
+                    </Nav.Item>
                   </Nav>
                   </motion.div>
                     <motion.div
@@ -87,35 +90,6 @@ export const Projects = () => {
                   >
                   <Tab.Content id="slideInUp">
                     <Tab.Pane eventKey="first">
-                        <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
-                        PMI SG Chapter Student Project Management Competition 2023, 3rd Runner-up
-                        </p>
-                        <Row>
-                        {
-                          PMI.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                        <p style={{ marginTop: '20px' }}>Planning an IT Project combining sustainability and tech-savvy solutions with fresh produce and Generative AI. Board content can be viewed in the Figma link below. Key highlights include:</p>
-                        <p>
-                        <ul>
-                        <li>Planning an AI Project, combining sustainability and tech-savvy solutions with fresh produce and Generative AI.</li>
-                        <li>Hybrid Project Management Methodology: Planning and designing the project management lifecycle using a combined agile and waterfall approach.</li>
-                        <li>AI Technology Evaluation and User-Flow Design: Evaluating AI technologies and designing user-flow.</li>
-                        <li>Comprehensive Use of Project Management Tools: Utilizing tools like a risk register and Gantt chart, along with presenting a budget and ROI analysis.</li>
-                        </ul>
-                        </p>
-                        <p>
-                        <button><a href="https://www.figma.com/file/R4PgwiVYlFX102rtKQBFmd/PMI-2023-GRASS?type=design&node-id=0%3A1&mode=design&t=nFJcQBLwTcAu4niI-1"><span>View Figma</span></a></button>
-                        </p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
                         <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
                             PSA Code Sprint Hackathon 2023, 3rd Runner Up
                         </p>
@@ -152,7 +126,73 @@ export const Projects = () => {
                         <button><a href="https://gitfront.io/r/qiaodotzip/15Y9CC9LmCpk/PSAbackend2023/"><span>View Code</span></a></button>
                         </p>
                     </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                        <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
+                        PMI SG Chapter Student Project Management Competition 2023, 3rd Runner-up
+                        </p>
+                        <Row>
+                        {
+                          PMI.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                        <p style={{ marginTop: '20px' }}>Planning an IT Project combining sustainability and tech-savvy solutions with fresh produce and Generative AI. Board content can be viewed in the Figma link below. Key highlights include:</p>
+                        <p>
+                        <ul>
+                        <li>Planning an AI Project, combining sustainability and tech-savvy solutions with fresh produce and Generative AI.</li>
+                        <li>Hybrid Project Management Methodology: Planning and designing the project management lifecycle using a combined agile and waterfall approach.</li>
+                        <li>AI Technology Evaluation and User-Flow Design: Evaluating AI technologies and designing user-flow.</li>
+                        <li>Comprehensive Use of Project Management Tools: Utilizing tools like a risk register and Gantt chart, along with presenting a budget and ROI analysis.</li>
+                        </ul>
+                        </p>
+                        <p>
+                        <button><a href="https://www.figma.com/file/R4PgwiVYlFX102rtKQBFmd/PMI-2023-GRASS?type=design&node-id=0%3A1&mode=design&t=nFJcQBLwTcAu4niI-1"><span>View Figma</span></a></button>
+                        </p>
+                    </Tab.Pane>
                     <Tab.Pane eventKey="third">
+                        <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
+                        2nd Kumar Sustainability & Innovation Prize, Finalist
+                        </p>
+                        <p>
+                        Verdefy is a comprehensive PaaS solution designed to aid SMEs in managing and reducing their carbon emissions. Demo Day is scheduled for March 2024.
+                        </p>
+                        <Row>
+                        {
+                          PSA.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                        <p style={{ marginTop: '20px' }}>Key Features of Verdefy:</p>
+                        <p>
+                        <ul>
+                        <li>Enables businesses to calculate, track, and manage carbon emissions.</li>
+                        <li>Incorporates blockchain-supported carbon credit trading.</li>
+                        <li>Powered by advanced algorithms, data analytics, and AI for accuracy and efficiency.</li>
+                        <li>Helps businesses adapt to carbon tax regulations and embrace eco-friendly practices.</li>
+                        <li>Facilitates connections with eco-friendly suppliers and partners.</li>
+                        <li>Empowers businesses to make data-driven, sustainable decisions.</li>
+                        </ul>
+                        </p>
+                        <p>
+                          I designed the database as well as coded the back-end logic. Do note that the following code only contains my part.
+                        </p>
+                        <p>
+                        <button><a href="https://gitfront.io/r/qiaodotzip/15Y9CC9LmCpk/PSAbackend2023/"><span>View Code</span></a></button>
+                        </p>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="fourth">
                         <p style={{ marginTop: '20px', fontWeight: 700, fontSize: '25px' }}>
                             Web Portfolio
                         </p>
